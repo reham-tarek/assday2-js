@@ -1,31 +1,50 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
 
-    </head>
-        <body>
-          
+<head>
 
-       <!--
+</head>
+
+<body>
+
+
+  <!--
        let o = Array("tt","oo","ii");
             let show = o[Math.floor(Math.random()* o.length)];
             document.write(show) */ -->
 
-           
-            <script> 
-     function koko(){
-        var myDate = new Date();
-       var show = myDate.toLocaleDateString();
-       document.write(show);
-      }; 
-      
-    </script>
 
+  <script>
+   // var btn = document.createElement("P");
+   // btn.innerHTML("show me date");
+   // btn.onclick = koko();
+//document.body.appendChild(btn)
 
+    function date() {
 
-               
-         <button onclick="koko()"> show the time</button> 
-  
-      </body>
-    
+      var colors = new Array();
+      colors["r"] = "red";
+      colors["g"] = "green";
+      colors["b"] = "blue";
+      do {
+        var color = prompt("please enter design color for the date (r(red), b(blue), (green)")
+      } while ( !((color == "r") || (color == "b") || (color == "g")));
+
+      var myDate = new Date();
+      var showDate = myDate.toLocaleDateString();
+
+       var d = document.createElement("p");
+    //var dateText =document.createTextNode("current date".bold() +showDate.fontcolor(colors[color]));
+      // d.appendChild(dateText);
+      d.innerHTML= ("current date".bold() +showDate.fontcolor(colors[color]));
+       document.body.appendChild(d);
+
+      // document.write(show);
+
+    };
+
+  </script>
+<button id="show" onclick="date()">SHOW ME DATE</button>
+</body>
+
 </html>
