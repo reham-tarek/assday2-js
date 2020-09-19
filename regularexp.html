@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+           function user(){
+              
+             do {
+                var name = prompt("whats is your name ?" ,"john");
+             } while(!/[a-z]{3}/g.test(name));
+             do {
+                var email = prompt("whats is your Email ?" ,"name@domain.com.eg");
+             }
+             while(!/.com.eg/g.test(email));
+             
+           }
+            user();
+     
+        </script>
+
+    </body>
+</html>
