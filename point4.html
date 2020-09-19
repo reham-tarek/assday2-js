@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+function date(){
+    var enterDate = prompt("enter date today","DD–MM–YYYY");
+    if( (enterDate.length !=10) || (enterDate.charAt(2)!="-") || (enterDate.charAt(5)!="-")){
+        alert("wrong date format");
+    } else{
+        var year = enterDate.substring(6)
+        var month = enterDate.substring(3,5)
+        var day = enterDate.substring(0,2)
+        var newDate= new Date(year, month-1, day);
+        alert(newDate.toDateString());
+    };
+
+}
+        </script>
+        <button onclick="date()"> SHOW DATE </button>
+    </body>
+</html>
